@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>News</title>
+		<link rel="icon" href="images/icon.ico" type="images/x-icon">
+		<link href="style.css" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" width="50" height="50" alt=""></a>
+			</div>
+			<nav class="nav-links">
+				<a href="goals.html">Goals</a>
+				<a href="about.html">News</a>
+				<a href="help.html">Help out</a>
+				<a href="gallery.html">Gallery</a>
+			</nav>
+			<div class="burger-menu" onclick="toggleMenu()">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="images/submarine.jpg" width="500" height="350" alt="">
+				</div>
+				<div class="col-md-6">
+					<img src="images/plastic.jpg" width="500" height="350" alt="">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<p>Life in the ocean has much to give it a wonderful and large variety of living organisms and habitats that form an amazing science. From discovering new species, as in the case of glowing deep-sea jellyfish, to keeping coral reef ecosystems alive, much about the resilience and adaptability of marine organisms is evolving. High-tech devices such as autonomous underwater vehicles and deep-water submersibles bring us to discovering these hidden depths that oceanic waters conceal. Therefore, environmental concerns regarding pollution and climate change also bear adverse effects on life underwater. Microplastics crawl into the ocean, and new forms of ocean acidification appear, wreaking havoc on life paths - species migrate or begin to demonstrate bad signs of adaptation. As well as noise pollution and stranding, researchers are looking into the role played by marine mammals because of their complex behavioral and communication patterns that truly intrigue. There is, however, assurance of valuable resources from deep-sea mining, but alarm bells keep ringing on habitat destruction and biodiversity loss.</p>
+				</div>
+				<div class="col-md-6">
+					<p>Underwater pollution is an issue that has continued to concern marine ecosystems, with the most recent developments showing the seriousness of the issue. One of the most worrying trends about the subject is the spread of microplastics from the deep sea to the Arctic ice. Recent research has shown that marine organisms, ranging from plankton to whales, are ingesting tiny particles of microplastics. This is raising concerns over their possible impact on food chains and human health. For example, it will lead to the deterioration of the marine environment through leakage of harmful substances that come from abandoned ships or operations of mining underwater. All governments and environmental organizations are now working on the issue. That includes reducing waste from plastic, enhance effectiveness in waste management, and increase awareness among the public.</p>
+				</div>
+				<div class="col-md-12">
+					<img src="images/wave.jpg" width="1125" height="350" alt="">
+					<p>In recent years there have been protests towards fishermen having to use cameras to record footage of their work. This is due to the mass unwarranted killings of marine life, such as dolphins, turtles, and seals caught in nets accidentally. This has led to the possible extinction of these beautiful animals, all because our method of fishing is lazy and insufficient.This includes at least 720,000 sea birds, 300,000 cetaceans (whales, dolphins, and porpoises), more than 250,000 turtles and 345,000 seals and sea lions annually across the globe.</p>
+				</div>
+			</div>
+		</div>	
+		<div class="footer">
+			<p>Please feel free to contact us at &nbsp; &nbsp; help@climateaction.org | +353 85-328-7501</p>
+		</div>
+		<script>
+			function toggleMenu() {
+				const navLinks = document.querySelector('.nav-links');
+				navLinks.classList.toggle('active');
+			}	
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	</body>	
+</html>

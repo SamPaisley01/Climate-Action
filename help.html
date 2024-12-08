@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="images/icon.ico" type="images/x-icon">
+		<title>Help out</title>
+		<link href="style.css" rel="stylesheet">
+		<script>
+		function validate() {
+		
+			//fn & sn check that something has been submitted
+			//check for tel > 0
+			//email check for the @ symbol
+			//check one or other radio button has been picked
+			//for any issues generate a msg - return that msg if required
+			
+			//to check for the above set a flag to be true and then change to false if any form condtion is met 
+			<form>
+				let valid = true; //our flag
+				let msge = "Incomplete form: ";
+				
+				if(document.getElementById("fn").value == "") {
+					msge+= "You need to fill firstname. "; //build msge
+					valid - false; //flag is false
+				}
+				if(document.getElementById("sn").value == "") {
+					msge+= "You need to fill surname. "; //build msge
+					valid - false; //flag is false
+				}
+				
+				if(document.getElementById("tel").value == 0) {
+					msge+= "Need to fill in phone number. ";
+					valid = false;
+				}
+				//valid email
+				if(document.getElementById("email").value == "") {
+					msge+= "need to fill in email. ";
+					valid = false;
+				} else if(document.getElementById("email").value != "") {
+					inputE = document.getElementById("email").value;
+					let symbol = inputE.indexOf("@"); //will return the index
+					if(symbol < 1) {
+						valid = false;
+						msge+= "not a valid email";
+					}
+				}
+				//validate radio
+				if(document.getElementById("oceana").checked == false && document.getElementById("fao").checked == false) {
+					msge+="You must check a organisation. ";
+					valid = false;
+				}
+				
+				// return the flag and show the msg
+				if(!valid) { // !valid means "not true"
+					document.getElementById("details").innerHTML = msge;
+				}
+				return valid;
+			}
+		</form>
+		</script>
+	</head>
+	<body>
+		<header> <!-- header section-->
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" width="50" height="50" alt=""></a>
+			</div>
+			<!-- navigation links-->
+			<nav class="nav-links">
+				<a href="goals.html">Goals</a>
+				<a href="about.html">News</a>
+				<a href="help.html">Help out</a>
+				<a href="gallery.html">Gallery</a>
+			</nav>
+			<!-- burger menu for mobile navigation-->
+			<div class="burger-menu" onclick="toggleMenu()">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</header>
+		<div class="top-text">
+			<h1>Thanks for helping</h1> <!-- form validation-->
+		</div>
+		<form onsubmit="return validate()">
+			firstname:<input type="text" id="fn"><br>
+			surname:<input type="text" id="sn"><br>
+			telephone:<input type="tel" id="tel"><br>
+			email:<input type="text" id="email"><br>
+			
+			<p>Choose a group you would like to help out</p> <!-- type of clickable button it is-->
+			<input type="radio" name="group" id="oceana" value="oceana">oceana<br>
+			<input type="radio" name="group" id="fao" value="fao">winter<br>
+			
+			<input type="submit" value="submit form">
+		</form>
+		<p id="details"></p>
+		<div class="footer"> <!-- footer section-->
+			<p>Please feel free to contact us at &nbsp; &nbsp; help@climateaction.org | +353 85-328-7501</p>
+		</div>
+	</body>	
+</html>

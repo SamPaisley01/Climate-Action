@@ -1,0 +1,276 @@
+* { /* Clears Default Margins*/
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+		
+body {
+	background-image: url("images/bg-brick.png"); /* Brick Image Background */
+	background-attachment: fixed;
+	background-position: center;
+	text-align: center;
+}
+
+header {
+    position: fixed; /* fixed header postion so always visible */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(51, 51, 51, 0.80); /* rgb so i can use opacity */
+    color: #fff;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main-image img {
+	background-size: 100% 100%; /* expand full page*/
+	width: 100%;
+	height: auto;
+	display: block;
+	border-bottom: 4px solid black;
+}
+
+.container img {
+	margin-top: 30px;
+	border: 3px solid black;
+}
+
+.container p {
+	margin-top: 30px;
+	margin-left: 40px;
+	font-size: 20px;
+	color: #fff;
+	text-shadow: 2px 2px black;
+}
+
+.container h1 {
+	text-align: center;
+	color: #fff;
+	margin-top: 20px;
+	text-shadow: 2px 2px black;
+}
+
+.row p {
+	margin-top: 100px;
+	margin-right: 40px;
+	font-size: 20px;
+	color: #fff;
+	text-shadow: 2px 2px black;
+}
+
+.row img {
+	margin-top: 100px;
+	margin-left: 30px;
+	margin-bottom: 30px;
+	border: 3px solid black;
+}
+
+.team-container p {
+	margin-left: 50px;
+}
+
+.team-container img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+.text-box p {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-left: 100px;
+	padding-right: 100px;
+	font-size: 20px;
+	color: #fff;
+	text-shadow: 2px 2px black;
+	text-align: center;
+}
+
+.button {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+
+.button button {
+	color: #fff;
+	background-color: #484547;
+	text-shadow: 1px 1px black;
+	border-color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 10px 20px;
+	margin-bottom: 30px;
+}
+
+.turtle-container img { 
+	background-size: 100% 100%;
+	width: 100%;
+	height: 1000;
+	display: block;
+	border-bottom: 4px solid black;
+}
+
+.gallery-container {
+    display: flex;
+}
+
+.gallery {
+    width: 45%;
+	margin-left: 50px;
+	margin-top: 50px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.gallery p {
+	margin-top: 20px;
+	font-size: 20px;
+	color: #fff;
+	text-shadow: 2px 2px black;
+}
+
+.top-text h1 {
+	text-align: center;
+	color: #fff;
+	font-size: 30px;
+	margin-top: 80px;
+	text-shadow: 2px 2px black;
+	margin-bottom: 30px;
+}
+
+form{
+	background-color: #949A96;
+	margin: 0 auto;
+	width: 500px;
+	margin-bottom: 200px;
+	padding: 20px 20px 40px 20px;
+	border-radius: 5px;
+	border: 4px solid black;
+	height: 100%;
+}
+
+input[type=text]{
+	margin: 4px 0 2px 0;
+	border-bottom: 2px solid teal;
+}
+
+.footer {
+	left: 0;
+	bottom: 0;
+	max-width: 100%;
+	background-color: #212020;
+	color: #8D8D8D;
+	text-align: center;
+	box-shadow: 0 5vh 0 5vh #212020;
+	padding-top: 5px;
+	background-size: 100% 100%;
+}
+
+.bottom-image {
+	margin-bottom: 50px;
+	margin-left: 200px;
+	margin-right: 40px;
+}
+
+.nav-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+ .nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+	font-size: 16px;
+	transition: color 0.3s;
+}
+
+.nav-links a:hover { /* changes color of anchor tag once cursor hoovers */
+	color: #129A1C;
+}
+
+.burger-menu {
+	display: none;
+	flex-direction: column;
+	gap: 5px;
+	cursor: pointer;
+}
+
+.burger-menu div {
+	width: 25px;
+	height: 3px;
+	background-color: white;
+}
+
+/* Media Queries for mobile approach */
+@media (max-width: 768px) {
+	
+.nav-container {
+	justify-content: flex-end;
+}
+
+/* Burger menu queries */
+.nav-links {
+	display: none;
+	flex-direction: column;
+	background-color: #444;
+	position: absolute;
+	top: 60px;
+	right: 20px;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.nav-links.active {
+	display: flex;
+}
+
+.burger-menu {
+	display: flex;
+}
+			
+.main-image img {
+	background-size: 100% 100%;
+}
+
+.container p, img {
+	text-align: center;
+	width: 80%;
+	
+}
+
+.container img {
+	max-width: 100%;
+}
+
+.glove img {
+	text-align: center;
+}
+
+.pollution img {
+	align-content: center;
+}
+
+.plastic img {
+	align-content: below;
+}
+
+.wave img {
+	align-content: left;
+}
