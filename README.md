@@ -1,0 +1,3 @@
+Hello if your reading this GitHub decided to have a stroke and not let me upload my images but i managed to figure it out but now theres tons of images not in the images folder..
+i cannot fix it i do apologise and also doesnt load some images on browser...
+-sam
